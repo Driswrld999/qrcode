@@ -1,0 +1,14 @@
+#:kivy ! ex
+<QRCodeScanner>:
+    orientation: "vertical"
+    Camera:
+        id: camera
+        resolution: (640, 480)
+        play: True
+        on_barcode: root.on_qr_decoded(*args)
+    Label:
+        id: qr_label
+        text: "Scan a QR code"
+        font_size: 18
+        size_hint_y: None
+        height: "48dp"
